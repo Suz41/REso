@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0e13">
+  <title>My Resolutions - 93-Day Reset</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="app">
+    <header class="top">
+      <button class="back" id="backBtn" onclick="back()" aria-label="Go back" title="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <div class="top-brand">
+        <div class="title">Anisha's Resolutions 🪷</div>
+      </div>
+      <div class="top-badge">B'day Reset</div>
+    </header>
+
+    <main id="main"></main>
+
+    <nav class="nav" aria-label="Main Navigation">
+      <button id="today" onclick="setView('today')">
+        <span class="nav-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <path d="M3 9.5L12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z" />
+            <path d="M9 22V12h6v10" />
+          </svg>
+        </span>
+        <span class="nav-label">Today</span>
+      </button>
+      <button id="calendar" onclick="setView('calendar')">
+        <span class="nav-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <rect x="3" y="4" width="18" height="18" rx="3" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+            <circle cx="8" cy="15" r="1" fill="currentColor" />
+            <circle cx="12" cy="15" r="1" fill="currentColor" />
+            <circle cx="16" cy="15" r="1" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="nav-label">Calendar</span>
+      </button>
+      <button id="report" onclick="setView('report')">
+        <span class="nav-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <line x1="18" y1="20" x2="18" y2="10" />
+            <line x1="12" y1="20" x2="12" y2="4" />
+            <line x1="6" y1="20" x2="6" y2="14" />
+          </svg>
+        </span>
+        <span class="nav-label">Report</span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="sheet" id="sheet" onclick="if(event.target===this)closeSheet()" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="panel">
+      <div class="handle" aria-hidden="true"></div>
+      <div class="panel-header">
+        <h2 id="st"></h2>
+        <p class="sub" id="ss"></p>
+      </div>
+      <div class="opts" id="opts"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
