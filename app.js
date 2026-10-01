@@ -514,7 +514,7 @@ function today() {
   main.innerHTML =
     '<section class="hero">' +
       '<h1>Keep it simple.</h1>' +
-      '<div class="hero-quote">“Jo badal gaya woh advik kya 😒”</div>' +
+      '<div class="hero-quote">“Jo badal gaya woh advik kya”</div>' +
     '</section>' +
     '<div class="blue">' +
       '<div class="hero-card-header">' +
@@ -981,8 +981,8 @@ function report() {
     slipsSectionHtml =
       '<div class="section"><span>Real Reasons & Exceptions Log</span></div>' +
       '<div class="clean-record-card">' +
-        '<div class="clean-record-icon">✨</div>' +
-        '<div class="clean-record-title">Clean Track Record!</div>' +
+        '<div class="clean-record-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>' +
+        '<div class="clean-record-title">Clean Track Record</div>' +
         '<div class="clean-record-sub">No outside food, no late phone scrolling, no neglected days, and boundaries held firm so far.</div>' +
       '</div>';
   }
@@ -1015,7 +1015,7 @@ function report() {
     '<div class="report-habit-grid">' +
       '<div class="report-habit-card">' +
         '<div class="report-habit-top">' +
-          '<span class="report-habit-name">🥗 Outside Food Control</span>' +
+          '<span class="report-habit-name">Outside Food Control</span>' +
           '<span class="report-habit-score">' + foodPct + '%</span>' +
         '</div>' +
         '<div class="report-habit-bar green"><i style="width:' + foodPct + '%"></i></div>' +
@@ -1023,7 +1023,7 @@ function report() {
       '</div>' +
       '<div class="report-habit-card">' +
         '<div class="report-habit-top">' +
-          '<span class="report-habit-name">🌙 11:30 PM Sleep Boundary</span>' +
+          '<span class="report-habit-name">11:30 PM Sleep Boundary</span>' +
           '<span class="report-habit-score">' + phonePct + '%</span>' +
         '</div>' +
         '<div class="report-habit-bar green"><i style="width:' + phonePct + '%"></i></div>' +
@@ -1031,7 +1031,7 @@ function report() {
       '</div>' +
       '<div class="report-habit-card">' +
         '<div class="report-habit-top">' +
-          '<span class="report-habit-name">💖 Khud Pe Focus</span>' +
+          '<span class="report-habit-name">Khud Pe Focus</span>' +
           '<span class="report-habit-score">' + healthPct + '%</span>' +
         '</div>' +
         '<div class="report-habit-bar green"><i style="width:' + healthPct + '%"></i></div>' +
@@ -1039,14 +1039,14 @@ function report() {
       '</div>' +
       '<div class="report-habit-card">' +
         '<div class="report-habit-top">' +
-          '<span class="report-habit-name">👨‍👩‍👧 Family & Myself</span>' +
+          '<span class="report-habit-name">Family & Myself</span>' +
           '<span class="report-habit-score">' + (aggStats.family.done + aggStats.family.rest) + ' d</span>' +
         '</div>' +
         '<div class="report-habit-stats">' + aggStats.family.done + ' quality time • ' + aggStats.family.rest + ' self-care rest • <b>Reason:</b> ' + (aggStats.family.bad > 0 ? aggStats.family.bad + ' days disconnected' : '0 days disconnected') + '</div>' +
       '</div>' +
       '<div class="report-habit-card">' +
         '<div class="report-habit-top">' +
-          '<span class="report-habit-name">💪 Gym & Movement</span>' +
+          '<span class="report-habit-name">Gym & Movement</span>' +
           '<span class="report-habit-score">' + (aggStats.move.enabledDays > 0 ? aggStats.move.done + ' done' : 'Optional') + '</span>' +
         '</div>' +
         '<div class="report-habit-stats">' + (aggStats.move.enabledDays > 0 ? aggStats.move.done + ' workouts • ' + aggStats.move.rest + ' recovery rest days • <b>Reason:</b> ' + (aggStats.move.bad > 0 ? aggStats.move.bad + ' days skipped' : '0 workouts skipped') : 'Gym tracking is optional & currently disabled') + '</div>' +
@@ -1130,7 +1130,7 @@ function openDay(kk) {
   if (phEl) phEl.style.display = 'none';
 
   const upcomingNoticeHtml = isFuture 
-    ? '<div class="upcoming-date-notice">📅 Upcoming Date — Tracking will count this date once it arrives</div>' 
+    ? '<div class="upcoming-date-notice">Upcoming Date — Tracking will count this date once it arrives</div>' 
     : '';
 
   const headerHtml =
@@ -1235,7 +1235,7 @@ function openRes(id, kk, fromDay) {
     const gymOn = isGymEnabled(kk);
     gymToggleHtml =
       '<div class="sheet-info-box">' +
-        '💪 <b>Optional Resolution:</b> If disabled, gym is completely excluded from your streak, scores, and reports. Enable only when you want to track workouts.' +
+        '<b>Optional Resolution:</b> If disabled, gym is completely excluded from your streak, scores, and reports. Enable only when you want to track workouts.' +
       '</div>' +
       '<div class="sheet-health-row" style="margin-bottom:12px;">' +
         '<div class="sheet-health-meta">' +
@@ -1254,7 +1254,7 @@ function openRes(id, kk, fromDay) {
     const choices = D(kk).mindChoices || [];
     mindChecklistHtml =
       '<div class="sheet-info-box">' +
-        '⚡ <b>Occasional Habit:</b> This resolution is situational. On calm days with no arguments or drama, leave as <i>No occasion today</i>.' +
+        '<b>Occasional Habit:</b> This resolution is situational. On calm days with no arguments or drama, leave as <i>No occasion today</i>.' +
       '</div>' +
       '<div class="section" style="margin:12px 0 8px;"><span>Which Boundaries Did You Practice? (When Tested)</span></div>' +
       MIND_CHOICES.map(c => {

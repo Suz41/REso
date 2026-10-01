@@ -151,8 +151,8 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`\n==================================================`);
-  console.log(`🚀 Live Dev Server is running at: http://localhost:${PORT}`);
-  console.log(`🔄 Live Reload active: edits in REso will auto-refresh.`);
+  console.log(`Live Dev Server is running at: http://localhost:${PORT}`);
+  console.log(`Live Reload active: edits in REso will auto-refresh.`);
   console.log(`==================================================\n`);
 });
 
